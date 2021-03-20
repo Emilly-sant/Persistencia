@@ -1,0 +1,8 @@
+package cesar.school.emilly.test.data.remote.model
+
+import com.google.gson.annotations.SerializedName
+
+data class Temp (
+        @SerializedName("temp")
+        var number: String //28°C
+)

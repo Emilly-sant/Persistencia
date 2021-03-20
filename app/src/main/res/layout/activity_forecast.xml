@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.forecast.ForecastActivity">
+
+    <ImageView
+        android:id="@+id/ivWeatherForecast"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ic_weather_placeholder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvtextForecastActivity" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvForecastsActivity"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivWeatherForecast" />
+
+    <TextView
+        android:id="@+id/tvTempUnitForecastActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/tvTempForecastActivity"
+        app:layout_constraintTop_toTopOf="@+id/tvTempForecastActivity"
+        tools:text="C°" />
+
+    <Button
+        android:id="@+id/btnFavorForecastActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Favorite" />
+
+    <TextView
+        android:id="@+id/tvTempForecastActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivWeatherForecast"
+        app:layout_constraintStart_toEndOf="@+id/ivWeatherForecast"
+        app:layout_constraintTop_toTopOf="@+id/ivWeatherForecast"
+        tools:text="28" />
+
+    <TextView
+        android:id="@+id/tvtextForecastActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Weather in Recife, BR" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/imgWeatherForecast"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/ic_weather_placeholder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/tvWind2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvcloud3"
+            app:layout_constraintStart_toEndOf="@+id/tvcloud3"
+            app:srcCompat="@drawable/ic_wind" />
+
+        <ImageView
+            android:id="@+id/tvCloud4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTempForecast"
+            app:layout_constraintStart_toEndOf="@+id/tvTempUnit"
+            app:srcCompat="@drawable/ic_cloud" />
+
+        <TextView
+            android:id="@+id/tvDateForecast"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imgWeatherForecast"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Feb 24, 2021 3:00 PM" />
+
+        <TextView
+            android:id="@+id/tvDescriptionForecast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDateForecast"
+            tools:text="few clouds" />
+
+        <TextView
+            android:id="@+id/tvTempForecast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textSize="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescriptionForecast"
+            tools:text="28" />
+
+        <TextView
+            android:id="@+id/tvTempUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toEndOf="@+id/tvTempForecast"
+            app:layout_constraintTop_toTopOf="@+id/tvTempForecast"
+            tools:text="°C" />
+
+        <TextView
+            android:id="@+id/tvCloudForecast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCloud4"
+            app:layout_constraintStart_toEndOf="@+id/tvCloud4"
+            tools:text="20" />
+
+        <TextView
+            android:id="@+id/tvcloud3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="%"
+            app:layout_constraintStart_toEndOf="@+id/tvCloudForecast"
+            app:layout_constraintTop_toTopOf="@+id/tvCloudForecast" />
+
+        <TextView
+            android:id="@+id/tvWindForecast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/tvWind2"
+            app:layout_constraintStart_toEndOf="@+id/tvWind2"
+            app:layout_constraintTop_toTopOf="@+id/tvWind2"
+            tools:text="3.6" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
